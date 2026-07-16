@@ -22,13 +22,6 @@ if major == 2 and minor <=6:
     # OrderedDict was added to the collections module in Python 2.7 and it is
     # there in all versions of Python 3.
     requirements.append('odict')
-if major == 3:
-    PYTHON3 = True
-    try:
-        import lib2to3 # Just a check--the module is not actually used
-    except ImportError:
-        print("Python 3.X support requires the 2to3 tool.")
-        sys.exit(1)
 
 def read(*rel_names):
     return open(os.path.join(os.path.dirname(__file__), *rel_names)).read()
